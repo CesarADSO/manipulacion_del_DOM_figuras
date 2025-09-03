@@ -21,7 +21,9 @@ function animacion() {
     figura.classList.add('girar')
 }
 
-
+function moverArriba() {
+    figura.style.transform = 'translateY(-30px)'
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
