@@ -1,7 +1,8 @@
 const figura = document.getElementById('figure');
 const titulo = document.getElementById('mainTitle');
+const parrafo = document.getElementById('mainParagraph');
 let tituloCambiado = "";
-
+let parrafoCambiado = "";
 
 function circulo() {
     // CREAMOS LA FUNCIONALIDAD
@@ -43,6 +44,13 @@ function cambiarTitulo() {
     tituloCambiado = prompt('Por favor Escriba el nuevo título que quiere que aparezca en la sección inferior de la derecha')
     titulo.textContent = tituloCambiado;
 }
+
+function cambiarParrafo() {
+    parrafoCambiado = prompt('Por favor escriba el nuevo párrafo que quiere que aparezca en la sección inferior de la derecha después del título')
+    parrafo.textContent = parrafoCambiado;
+}
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // BOTONES PARA CAMBIAR LOS ESTILOS DE LA FIGURA
