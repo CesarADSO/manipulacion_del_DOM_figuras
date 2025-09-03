@@ -33,6 +33,12 @@ function moverIzquierda() {
     figura.style.transform = 'translateX(-200px)'
 }
 
+function moverDerecha() {
+    figura.style.transform = 'translateX(200px)'
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella);
