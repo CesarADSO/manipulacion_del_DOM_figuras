@@ -88,6 +88,15 @@ button:hover {
   margin-top: 20px;
 }
 
+@keyframes girar {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.girar {
+  animation: girar 3s linear infinite;
+}
+
 hr{
     margin: 40px 0;
 }

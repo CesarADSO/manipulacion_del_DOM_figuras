@@ -17,7 +17,9 @@ function gif() {
     figura.style.backgroundSize = 'cover'
 }
 
-
+function animacion() {
+    figura.classList.add('girar')
+}
 
 
 
