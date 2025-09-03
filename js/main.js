@@ -12,7 +12,10 @@ function estrella() {
     figura.style.clipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)'
 }
 
-
+function gif() {
+    figura.style.backgroundImage = 'url("../img/Happy Skeleton GIF.gif")'
+    figura.style.backgroundSize = 'cover'
+}
 
 
 
