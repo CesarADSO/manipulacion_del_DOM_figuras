@@ -1,4 +1,6 @@
 const figura = document.getElementById('figure');
+const titulo = document.getElementById('mainTitle');
+let tituloCambiado = "";
 
 
 function circulo() {
@@ -37,9 +39,13 @@ function moverDerecha() {
     figura.style.transform = 'translateX(200px)'
 }
 
-
+function cambiarTitulo() {
+    tituloCambiado = prompt('Por favor Escriba el nuevo título que quiere que aparezca en la sección inferior de la derecha')
+    titulo.textContent = tituloCambiado;
+}
 
 document.addEventListener('DOMContentLoaded', function () {
+    // BOTONES PARA CAMBIAR LOS ESTILOS DE LA FIGURA
     document.getElementById('btnCircle').addEventListener('click', circulo);
     document.getElementById('btnStar').addEventListener('click', estrella);
     document.getElementById('btnGif').addEventListener('click', gif);
@@ -48,6 +54,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnMoveDown').addEventListener('click', moverAbajo);
     document.getElementById('btnMoveLeft').addEventListener('click', moverIzquierda);
     document.getElementById('btnMoveRight').addEventListener('click', moverDerecha);
+    // BOTONES PARA CAMBIAR LOS CONTENIDOS
+    document.getElementById('btnChangeTitle').addEventListener('click', cambiarTitulo);
+    document.getElementById('btnChangeParagraph').addEventListener('click', cambiarParrafo);
+    document.getElementById('btnAddParagraph').addEventListener('click', agregarParrafo);
+    document.getElementById('btnRemoveParagraph').addEventListener('click', eliminarParrafo);
 }
 
 ); 
