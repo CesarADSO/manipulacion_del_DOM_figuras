@@ -3,6 +3,9 @@ const titulo = document.getElementById('mainTitle');
 const parrafo = document.getElementById('mainParagraph');
 let tituloCambiado = "";
 let parrafoCambiado = "";
+const lugarDondeVaElParrafo = document.querySelector('.media');
+const nuevoParrafo = document.createElement('p');
+let texto = "";
 
 function circulo() {
     // CREAMOS LA FUNCIONALIDAD
@@ -50,7 +53,11 @@ function cambiarParrafo() {
     parrafo.textContent = parrafoCambiado;
 }
 
-
+function agregarParrafo() {
+    texto = prompt('Por favor ingrese un nuevo párrafo para que se agregé a la parte final de la página web');
+    nuevoParrafo.textContent = texto;
+    lugarDondeVaElParrafo.appendChild(nuevoParrafo);
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     // BOTONES PARA CAMBIAR LOS ESTILOS DE LA FIGURA
