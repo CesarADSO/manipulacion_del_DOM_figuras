@@ -9,9 +9,9 @@ let texto = "";
 let color = "";
 let cambiarFiguraPrompt = "";
 const arregloDeImagenes = [
-    '../img/imagen.jpg',
-    '../img/imagen2.jpg',
-    '../img/imagen3.jpg'
+    'img/imagen.jpg',
+    'img/imagen2.jpg',
+    'img/imagen3.jpg'
 ];
 const imagen = document.getElementById('mainImage');
 let index = 0;
