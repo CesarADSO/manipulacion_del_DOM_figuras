@@ -3,7 +3,7 @@ const titulo = document.getElementById('mainTitle');
 const parrafo = document.getElementById('mainParagraph');
 let tituloCambiado = "";
 let parrafoCambiado = "";
-const lugarDondeVaElParrafo = document.querySelector('.media');
+const lugarDondeVaElParrafo = document.querySelector('#extraParagraphs');
 const nuevoParrafo = document.createElement('p');
 let texto = "";
 let color = "";
@@ -15,7 +15,6 @@ const arregloDeImagenes = [
 ];
 const imagen = document.getElementById('mainImage');
 let index = 0;
-let index2 = 0;
 let alt = "";
 const enlace = document.getElementById('mainLink');
 let pedirEnlace = "";
@@ -24,11 +23,15 @@ function circulo() {
     // CREAMOS LA FUNCIONALIDAD
     figura.style.borderRadius = '50%'
     figura.style.backgroundColor = '#007bff'
+    figura.style.clipPath = '';
+    figura.style.backgroundImage = '';
 }
 
 function estrella() {
     //CREAMOS LA FUNCIONALIDAD
     figura.style.clipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)'
+    figura.style.backgroundColor = '#969696'
+    figura.style.backgroundImage = '';
 }
 
 function gif() {
@@ -37,7 +40,7 @@ function gif() {
 }
 
 function animacion() {
-    figura.classList.add('girar')
+    figura.classList.toggle('girar')
 }
 
 function moverArriba() {
@@ -58,17 +61,32 @@ function moverDerecha() {
 
 function cambiarTitulo() {
     tituloCambiado = prompt('Por favor Escriba el nuevo título que quiere que aparezca en la sección inferior de la derecha')
-    titulo.textContent = tituloCambiado;
+    if (tituloCambiado === "") {
+        alert('No se ingresó ningún título');
+    }
+    else{
+        titulo.textContent = tituloCambiado;
+    }
 }
 
 function cambiarParrafo() {
     parrafoCambiado = prompt('Por favor escriba el nuevo párrafo que quiere que aparezca en la sección inferior de la derecha después del título')
-    parrafo.textContent = parrafoCambiado;
+    if (parrafoCambiado === "") {
+        alert('No se ingresó ningún párrafo');
+    }
+    else{
+        parrafo.textContent = parrafoCambiado;
+    }
 }
 
 function agregarParrafo() {
     texto = prompt('Por favor ingrese un nuevo párrafo para que se agregé a la parte final de la página web');
-    nuevoParrafo.textContent = texto;
+    if (texto === "") {
+        alert('No se ingresó ningún párrafo');
+    }
+    else{
+        nuevoParrafo.textContent = texto;
+    }
     lugarDondeVaElParrafo.appendChild(nuevoParrafo);
 }
 
@@ -77,7 +95,7 @@ function eliminarParrafo() {
 }
 
 function colorHEX() {
-    color = prompt('Por favor escriba un color en formato #HEX');
+    color = prompt('Por favor escriba un color en formato #HEX, Ejemplo "#969696", "#007bff"');
     figura.style.backgroundColor = color;
 }
 
@@ -100,6 +118,10 @@ function elegirFigura() {
             figura.style.borderRadius = '';
             figura.style.clipPath = '';
             break;
+
+        default:
+            alert('Palabra no válida para cambiar la figura');
+            break
     }
 }
 
@@ -114,13 +136,13 @@ function cambiarImagenSiguiente() {
 }
 
 function cambiarImagenAtras() {
-    index2--;
+    index--;
 
-    if (index2 < 0) {
-        index2 = arregloDeImagenes.length - 1;
+    if (index < 0) {
+        index = arregloDeImagenes.length - 1;
     }
 
-    imagen.setAttribute('src', arregloDeImagenes[index2]);
+    imagen.setAttribute('src', arregloDeImagenes[index]);
 }
 
 function MostrarOcultarImagen() {
