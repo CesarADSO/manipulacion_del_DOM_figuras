@@ -120,6 +120,10 @@ function cambiarImagenAtras() {
     imagen.setAttribute('src', arregloDeImagenes[index2]);
 }
 
+function MostrarOcultarImagen() {
+    imagen.classList.toggle('disabled');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // BOTONES PARA CAMBIAR LOS ESTILOS DE LA FIGURA
     document.getElementById('btnCircle').addEventListener('click', circulo);
