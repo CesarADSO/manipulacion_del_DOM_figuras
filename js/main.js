@@ -6,6 +6,7 @@ let parrafoCambiado = "";
 const lugarDondeVaElParrafo = document.querySelector('.media');
 const nuevoParrafo = document.createElement('p');
 let texto = "";
+let color = "";
 
 function circulo() {
     // CREAMOS LA FUNCIONALIDAD
@@ -63,6 +64,11 @@ function eliminarParrafo() {
     nuevoParrafo.remove()
 }
 
+function colorHEX() {
+    color = prompt('Por favor escriba un color en formato #HEX');
+    figura.style.backgroundColor = color;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // BOTONES PARA CAMBIAR LOS ESTILOS DE LA FIGURA
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -78,6 +84,16 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnChangeParagraph').addEventListener('click', cambiarParrafo);
     document.getElementById('btnAddParagraph').addEventListener('click', agregarParrafo);
     document.getElementById('btnRemoveParagraph').addEventListener('click', eliminarParrafo);
+    //BOTONES PARA CAMBIAR LOS ATRIBUTOS
+    document.getElementById('btnHexColor').addEventListener('click', colorHEX);
+    document.getElementById('btnChooseFigure').addEventListener('click', elegirFigura);
+    document.getElementById('btnChangeImageNext').addEventListener('click', cambiarImagenSiguiente);
+    document.getElementById('btnChangeImagePrev').addEventListener('click', cambiarImagenAtras);
+    document.getElementById('btnToggleImage').addEventListener('click', MostrarOcultarImagen);
+    document.getElementById('btnChangeAlt').addEventListener('click', cambiarAtributoAlt);
+    document.getElementById('btnChangeLink').addEventListener('click', cambiarEnlace);
+    document.getElementById('btnOpenLink').addEventListener('click', AbrirEnlace);
+    document.getElementById('btnDisabledLink').addEventListener('click', desabilitarEnlace);
 }
 
 ); 
