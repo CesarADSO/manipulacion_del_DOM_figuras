@@ -17,6 +17,8 @@ const imagen = document.getElementById('mainImage');
 let index = 0;
 let index2 = 0;
 let alt = "";
+const enlace = document.getElementById('mainLink');
+let pedirEnlace = "";
 
 function circulo() {
     // CREAMOS LA FUNCIONALIDAD
@@ -128,6 +130,11 @@ function MostrarOcultarImagen() {
 function cambiarAtributoAlt() {
     alt = prompt('Ingrese por favor un texto alternativo para la imagen que está observando a continuación');
     imagen.setAttribute('alt', alt);
+}
+
+function cambiarEnlace() {
+    pedirEnlace = prompt('Por favor escriba una url para agregársela al enlace de abajo');
+    enlace.setAttribute('href', pedirEnlace);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
