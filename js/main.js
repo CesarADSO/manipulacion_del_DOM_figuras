@@ -141,6 +141,10 @@ function abrirEnlace() {
     enlace.setAttribute('target', 'blank');
 }
 
+function deshabilitarEnlace() {
+    enlace.removeAttribute('href');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // BOTONES PARA CAMBIAR LOS ESTILOS DE LA FIGURA
     document.getElementById('btnCircle').addEventListener('click', circulo);
@@ -165,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('btnChangeAlt').addEventListener('click', cambiarAtributoAlt);
     document.getElementById('btnChangeLink').addEventListener('click', cambiarEnlace);
     document.getElementById('btnOpenLink').addEventListener('click', abrirEnlace);
-    document.getElementById('btnDisabledLink').addEventListener('click', desabilitarEnlace);
+    document.getElementById('btnDisableLink').addEventListener('click', deshabilitarEnlace);
 }
 
 ); 
