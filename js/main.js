@@ -16,6 +16,7 @@ const arregloDeImagenes = [
 const imagen = document.getElementById('mainImage');
 let index = 0;
 let index2 = 0;
+let alt = "";
 
 function circulo() {
     // CREAMOS LA FUNCIONALIDAD
@@ -122,6 +123,11 @@ function cambiarImagenAtras() {
 
 function MostrarOcultarImagen() {
     imagen.classList.toggle('disabled');
+}
+
+function cambiarAtributoAlt() {
+    alt = prompt('Ingrese por favor un texto alternativo para la imagen que está observando a continuación');
+    imagen.setAttribute('alt', alt);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
