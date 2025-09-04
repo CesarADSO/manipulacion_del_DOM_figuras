@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #000000;
   padding: 20px;
 }
 
@@ -21,7 +21,7 @@ body {
 /* Columna izquierda */
 .left {
   flex: 1;
-  background: #fff;
+  background: yellow;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -44,21 +44,21 @@ body {
 button {
   padding: 14px 20px;
   border: none;
-  background: #013889;
+  background: #000000;
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
   min-width: 160px;
   margin: 16px;
-  border: 2px solid #013889;
+  border: 2px solid #000000;
 
 }
 
 button:hover {
   background: #fff;
-  color: #013889;
-  border: 2px solid #013889;
+  color: #000000;
+  border: 2px solid #000000;
   border-radius: 0;
   transform: scale(1.1);
 }
@@ -66,7 +66,7 @@ button:hover {
 /* Columna derecha */
 .right {
   flex: 1;
-  background: #fff;
+  background: yellow;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
