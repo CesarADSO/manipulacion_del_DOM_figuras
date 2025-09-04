@@ -8,6 +8,13 @@ const nuevoParrafo = document.createElement('p');
 let texto = "";
 let color = "";
 let cambiarFiguraPrompt = "";
+const arregloDeImagenes = [
+    '../img/imagen.jpg',
+    '../img/imagen2.jpg',
+    '../img/imagen3.jpg'
+];
+const imagen = document.getElementById('mainImage');
+let index = 0;
 
 function circulo() {
     // CREAMOS LA FUNCIONALIDAD
@@ -90,6 +97,16 @@ function elegirFigura() {
             figura.style.clipPath = '';
             break;
     }
+}
+
+function cambiarImagenSiguiente() {
+    index++;
+    
+    if (index >=arregloDeImagenes.length) {
+        index = 0;
+    }
+
+    imagen.setAttribute('src', arregloDeImagenes[index]);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
