@@ -59,6 +59,10 @@ function agregarParrafo() {
     lugarDondeVaElParrafo.appendChild(nuevoParrafo);
 }
 
+function eliminarParrafo() {
+    nuevoParrafo.remove()
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     // BOTONES PARA CAMBIAR LOS ESTILOS DE LA FIGURA
     document.getElementById('btnCircle').addEventListener('click', circulo);
