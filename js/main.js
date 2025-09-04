@@ -7,6 +7,7 @@ const lugarDondeVaElParrafo = document.querySelector('.media');
 const nuevoParrafo = document.createElement('p');
 let texto = "";
 let color = "";
+let cambiarFiguraPrompt = "";
 
 function circulo() {
     // CREAMOS LA FUNCIONALIDAD
@@ -67,6 +68,28 @@ function eliminarParrafo() {
 function colorHEX() {
     color = prompt('Por favor escriba un color en formato #HEX');
     figura.style.backgroundColor = color;
+}
+
+function elegirFigura() {
+    cambiarFiguraPrompt = prompt('Por favor escoja entre círculo, estrella o cuadrado para cambiar la figura');
+    switch (cambiarFiguraPrompt) {
+        case 'círculo':
+            figura.style.borderRadius = '50%';
+            figura.style.clipPath = '';
+            break;
+        
+        case 'estrella':
+            figura.style.clipPath = 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)';
+            figura.style.borderRadius = '';
+            break;
+
+        case 'cuadrado':
+            figura.style.width = '200px';
+            figura.style.height = '200px';
+            figura.style.borderRadius = '';
+            figura.style.clipPath = '';
+            break;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
