@@ -15,6 +15,7 @@ const arregloDeImagenes = [
 ];
 const imagen = document.getElementById('mainImage');
 let index = 0;
+let index2 = 0;
 
 function circulo() {
     // CREAMOS LA FUNCIONALIDAD
@@ -107,6 +108,16 @@ function cambiarImagenSiguiente() {
     }
 
     imagen.setAttribute('src', arregloDeImagenes[index]);
+}
+
+function cambiarImagenAtras() {
+    index2--;
+
+    if (index2 < 0) {
+        index2 = arregloDeImagenes.length - 1;
+    }
+
+    imagen.setAttribute('src', arregloDeImagenes[index2]);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
