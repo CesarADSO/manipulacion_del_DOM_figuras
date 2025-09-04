@@ -35,7 +35,7 @@ function estrella() {
 }
 
 function gif() {
-    figura.style.backgroundImage = 'url("../img/Happy Skeleton GIF.gif")'
+    figura.style.backgroundImage = 'url("../img/happySkeletonGIF.gif")'
     figura.style.backgroundSize = 'cover'
 }
 
