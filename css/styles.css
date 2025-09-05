@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 /* Reset sencillo */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 body {
@@ -21,7 +23,7 @@ body {
 /* Columna izquierda */
 .left {
   flex: 1;
-  background: yellow;
+  background: #FFD700;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -31,7 +33,7 @@ body {
 .left h2,
 .right h2 {
   padding: 20px;
-  color: #013889;
+  color: #000000;
   font-size: 30px;
 }
 
@@ -66,7 +68,7 @@ button:hover {
 /* Columna derecha */
 .right {
   flex: 1;
-  background: yellow;
+  background: #FFD700;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
@@ -81,7 +83,7 @@ button:hover {
 .box {
   width: 200px;
   height: 200px;
-  background-color: #013889;
+  background-color: #000000;
   margin: 0 auto;
   border-radius: 0;
   transition: all 0.5s ease;
